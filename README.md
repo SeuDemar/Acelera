@@ -1,3 +1,23 @@
+## Alunos do grupo
+
+Vitor Boer
+Natan Augusto
+Guilherme Vieira
+João Duarte
+
+Entrega no dia 12/06/2025 para a disciplina de WebServices e Apis
+
+---
+
+## Tecnologias Usadas
+
+- **Node.js** — ambiente de execução JavaScript no servidor  
+- **Express.js** — framework web para criar a API  
+- **Redis** — banco de dados em memória para cache  
+- **Axios** — cliente HTTP para requisições externas  
+- **dotenv** — gerenciamento de variáveis de ambiente  
+- **Swagger** — documentação automática da API
+- **Wsl** - subsistema linux para uso do Redis
 
 ---
 
