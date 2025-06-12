@@ -7,7 +7,7 @@ const swaggerUi = require('swagger-ui-express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Swagger Spec
+
 const swaggerSpec = {
   openapi: '3.0.0',
   info: {
@@ -50,7 +50,6 @@ const swaggerSpec = {
   }
 };
 
-// Rota COM cache via Redis
 app.get('/matches', cacheMiddleware(600), async (req, res) => {
   try {
     const data = await getMatches();
@@ -61,7 +60,6 @@ app.get('/matches', cacheMiddleware(600), async (req, res) => {
   }
 });
 
-// Rota SEM cache (força requisição nova à API)
 app.get('/matches/live', async (req, res) => {
   try {
     const data = await getMatches();
@@ -72,7 +70,7 @@ app.get('/matches/live', async (req, res) => {
   }
 });
 
-// Rota para limpar o cache
+
 app.delete('/matches/cache', async (req, res) => {
   const redis = require('redis');
   const redisClient = redis.createClient({ url: process.env.REDIS_URL });
@@ -90,10 +88,8 @@ app.delete('/matches/cache', async (req, res) => {
   }
 });
 
-// Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
   console.log(`Swagger: http://localhost:${PORT}/api-docs`);

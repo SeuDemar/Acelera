@@ -9,9 +9,9 @@ async function getMatches() {
   const allMatches = [];
   const limit = 50;
   let offset = 0;
-  const maxRequests = 20;
+  const maxRequests = 5;
   let requestsMade = 0;
-  const delayMs = 6 * 1000; // 6 segundos para 10 req/min
+  const delayMs = 6 * 1000;
 
   while (requestsMade < maxRequests) {
     console.log(`Buscando partidas – offset=${offset}, requisição ${requestsMade + 1}/${maxRequests}`);
