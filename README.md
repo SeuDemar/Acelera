@@ -1,8 +1,8 @@
 ## Alunos do grupo
 
-Vitor Boer
-Natan Augusto
-Guilherme Vieira
+Vitor Boer -
+Natan Augusto -
+Guilherme Vieira -
 João Duarte
 
 Entrega no dia 12/06/2025 para a disciplina de WebServices e Apis
